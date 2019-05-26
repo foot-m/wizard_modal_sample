@@ -1,8 +1,16 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## モーダルウィザードサンプル
 
-## Available Scripts
+モーダルでウィザードを表現するサンプル。  
 
-In the project directory, you can run:
+- モーダルオープンボタンでモーダルオープン
+- 次へ・戻るボタンで画面の遷移
+- 画面遷移と同時にURLのquery-stringも変更
+- urlにopenModal=1をつけるとモーダルを開いた状態で始まる。
+- localhost:3000?page=2&openModal=1とすると2ページ目を開いた状態で始まる。
+
+モーダルの特定ページを開いた状態で画面遷移してきたい、という要件があったのでそのための調査。  
+react-routerはquery-stringの違いでroutingを解釈できないっぽい。  
+そのためreact-routerはurl書き換えのためのみに使用。
 
 ### `npm start`
 
